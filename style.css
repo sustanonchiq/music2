@@ -1,15 +1,6 @@
 .discography-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-}
-
-.discography-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .discography {
@@ -24,6 +15,7 @@
     letter-spacing: 0em;
     gap: 10px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .discography img {
@@ -35,4 +27,14 @@
 
 .calendar-item {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 756px) {
+    .discography {
+        max-width: 100px;
+    }
+
+    .discography-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
